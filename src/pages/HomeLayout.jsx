@@ -6,15 +6,16 @@ import styled from 'styled-components'
 const HomeLayout = () => {
   return (
     <Wrapper>
-      <Navbar/>
-      <Outlet/>
-    
+      <Navbar />
+      <Outlet />
     </Wrapper>
   )
 }
-const Wrapper=styled.div`
-  background-color:rgb(185, 30, 30);
+
+const Wrapper = styled.div`
+  background-color: rgb(228, 183, 183);
+  min-height: 100vh;
   padding: 20px;
-  margin: 20px;
 `
+
 export default HomeLayout

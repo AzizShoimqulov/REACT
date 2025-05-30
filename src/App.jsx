@@ -13,31 +13,17 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout />,
-    children:[
+    errorElement: <Error />,
+    children: [
+      { index: true, element: <Landing /> },
       {
-        index:true,
-        element: <Landing />
+        path: 'about',
+        element: <About />,
       },
-  {
-    path: 'about',
-    element: <About />,
-    children:[
-      {
-        path:'company',
-        element:<h2>Our Company</h2>
-      },
-      {
-        path:'person',
-        element:<h2>Our Person</h2>
-      }
+      { path: 'newsletter', element: <Newsletter /> },
+      { path: 'cocktail', element: <Cocktail /> }
     ]
-  },
-  {
-    path: 'newsletter',
-    element: <Newsletter />
-  },
-]
-},
+  }
 ])
 
 const App = () => {
