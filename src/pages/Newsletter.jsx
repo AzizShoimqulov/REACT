@@ -17,7 +17,7 @@ const Newsletter = () => {
   return (
     <section>
       <form className="form">
-        <h4>Subscribe to Newsletter</h4>
+        <h4>Drink Search</h4>
         <div className="form-control">
           <input
             type="text"
@@ -27,14 +27,13 @@ const Newsletter = () => {
           onChange={(e) => setSearchLetter(e.target.value)}
           maxLength="1"
           />
-          <button type="submit" className="btn">Subscribe</button>
         </div>
       </form>
       <div className="cockx-tail-list">
         {cocktails.map((drink) => (
           <div key={drink.idDrink}>
-            <h5>{drink.strDrink}</h5>
-            <img src={drink.strDrinkThumb} alt={drink.strDrink} width="250" />
+            <img src={drink.strDrinkThumb} alt={drink.strDrink} width="300" height={260} />
+            <h3>{drink.strDrink}</h3>
           </div>
         ))}
       </div>

@@ -253,8 +253,18 @@ ul {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  margin: 2rem 0;
+  margin: 0rem 5rem;
   flex-wrap: wrap;
+}
+.cockx-tail-list h3{
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--grey-700)
+}
+.cockx-tail-list img {
+  border-radius: 12px;
 }
 
 /* alert */
@@ -308,16 +318,16 @@ ul {
 
 form h4 {
   text-align: center;
+  font-weight: bold;
   margin-bottom: 1.5rem;
 }
-.form-control {
-  display: grid;
-  grid-template-columns: 1fr 100px;
-}
+
 .form-input {
-  border-radius: 0;
-  border-top-left-radius: var(--borderRadius);
-  border-bottom-left-radius: var(--borderRadius);
+  border-radius: 7px;
+  height: 40px;
+  background-color: #ecfcff;
+  border: 1px solid #222;
+  outline: none;
 }
 .form-control .btn {
   border-radius: 0;
