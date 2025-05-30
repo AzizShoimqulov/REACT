@@ -20,25 +20,21 @@ const Newsletter = () => {
         <h4>Subscribe to Newsletter</h4>
         <div className="form-control">
           <input
-            type="email"
+            type="text"
             className="form-input"
-            placeholder="Enter email"
+            placeholder="Enter a letter"
+             value={searchLetter}
+          onChange={(e) => setSearchLetter(e.target.value)}
+          maxLength="1"
           />
           <button type="submit" className="btn">Subscribe</button>
         </div>
-        <input
-          type="text"
-          placeholder="Enter a letter"
-          value={searchLetter}
-          onChange={(e) => setSearchLetter(e.target.value)}
-          maxLength="1"
-        />
       </form>
-      <div className="cocktail-list">
+      <div className="cockx-tail-list">
         {cocktails.map((drink) => (
           <div key={drink.idDrink}>
             <h5>{drink.strDrink}</h5>
-            <img src={drink.strDrinkThumb} alt={drink.strDrink} width="100" />
+            <img src={drink.strDrinkThumb} alt={drink.strDrink} width="250" />
           </div>
         ))}
       </div>

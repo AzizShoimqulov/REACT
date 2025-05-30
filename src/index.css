@@ -248,6 +248,15 @@ ul {
 
 }
 
+.cockx-tail-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
 /* alert */
 
 @keyframes spinner {
