@@ -1,6 +1,7 @@
 import React from 'react'
-import { createBrowserRouter,RouterProvider } from 'react-router-dom'
-import { Landing,
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import {
+  Landing,
   About,
   Cocktail,
   Error,
@@ -8,10 +9,29 @@ import { Landing,
   Newsletter
 } from './pages'
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <HomeLayout />,
+    children:[
+  {
+    path: '/about',
+    element: <About />
+  },
+  {
+    path: '/landing',
+    element: <Landing />
+  },
+  {
+    path: '/newsletter',
+    element: <Newsletter />
+  },
+]
+},
+])
+
 const App = () => {
-  return (
-    <div>App</div>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App
