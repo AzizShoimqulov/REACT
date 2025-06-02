@@ -5,13 +5,12 @@ const Newsletter = () => {
   const [cocktails, setCocktails] = useState([])
 
   useEffect(() => {
-    if (searchLetter) {
-      fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${searchLetter}`)
-        .then((res) => res.json())
-        .then((data) => {
-          setCocktails(data.drinks || [])
-        })
-    }
+    const letter = searchLetter || 'a'
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setCocktails(data.drinks || [])
+      })
   }, [searchLetter])
 
   return (
@@ -23,9 +22,9 @@ const Newsletter = () => {
             type="text"
             className="form-input"
             placeholder="Enter a letter"
-             value={searchLetter}
-          onChange={(e) => setSearchLetter(e.target.value)}
-          maxLength="1"
+            value={searchLetter}
+            onChange={(e) => setSearchLetter(e.target.value)}
+            maxLength="1"
           />
         </div>
       </form>
@@ -42,3 +41,4 @@ const Newsletter = () => {
 }
 
 export default Newsletter
+
